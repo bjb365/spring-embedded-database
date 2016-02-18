@@ -13,6 +13,15 @@ import org.springframework.stereotype.Repository;
 
 import com.mkyong.model.User;
 
+/*
+ 
+ JdbcTemplates
+ NamedParameterJdbcTemplate
+ 
+ http://www.javatpoint.com/spring-JdbcTemplate-tutorial
+ 
+ */
+
 @Repository
 public class UserDaoImpl implements UserDao {
 

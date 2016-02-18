@@ -26,17 +26,19 @@ NOTES
 1. `com.mkyong.servlet3.MyWebInitializer` is loaded. It extends Spring's `AbstractAnnotationConfigDispatcherServletInitializer`
 2. `com.mkyong.config.SpringRootConfig` and `com.mkyong.config.SpringWebConfig` are loaded ( from step 1 )
 
-
-
 ##### Spring Profiles:
 `com.mkyong.servlet3.MyWebInitializer` `onStartup(ServletContext servletContext)`
 - Sets "spring.profiles.active" property to "hsql"
 - Spring Beans annotated with `@Profile("hsql")` are used. Any other `@Bean`s with `@Profile` are ignored.
 - In this app it tells Spring to ignore the Derby and H2 config `@Bean`s in `com.mkyong.config.db`
 
-#### Web Config / web.xml:
+#### Servlet3's Java Web Config ( replaces web.xml )
 `com.mkyong.config.SpringWebConfig`
 - Java based configuration for web.xml
 - Defines InternalResourceViewResolver ( for serving .jsp ) and resource handlers 
 
+
+#### JdbcTemplate / *NamedParameter*JdbcTemplate
+-  `com.mkyong.dao.UserDaoImpl`
+- Includes a private class implementation of `RowMapper<T>` used with the JdbcTemplate query 
 

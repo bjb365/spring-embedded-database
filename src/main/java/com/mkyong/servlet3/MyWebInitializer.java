@@ -8,6 +8,14 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import com.mkyong.config.SpringRootConfig;
 import com.mkyong.config.SpringWebConfig;
 
+
+/*
+AbstractAnnotationConfigDispatcherServletInitializer is an implementation of WebApplicationInitializer 
+
+A good read up of it is here :
+http://joshlong.com/jl/blogPost/simplified_web_configuration_with_spring.html
+
+ */
 public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
