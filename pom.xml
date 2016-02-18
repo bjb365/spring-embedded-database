@@ -148,6 +148,9 @@
 					<webApp>
 						<contextPath>/spring-mvc-db</contextPath>
 					</webApp>
+					<httpConnector>
+						<port>9090</port>
+					</httpConnector>
 				</configuration>
 			</plugin>
 
